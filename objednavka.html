@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="cs">
+  <head>
+    <meta charset="utf-8" />
+    <title>Známky</title>
+  </head>
+  <body>
+	<h1>Známky</h1>
+	
+	<form method="GET">
+		<label>SPZ: <input type="text" name="spz"></label>
+		<button>Přidat</button>
+	</form>
+	
+	<hr>
+	<h2>Zaplacené známky</h2>
+	<ul>
+	{% for spz in spzky %}
+		<li>{{ spz }}</li>
+	{% endfor %}
+	</ul>
+
+	<hr>
+	<h2>Pokuty</h2>
+	<ul>
+	{% for spz in pokuty %}
+		<li>{{ spz }}</li>
+	{% endfor %}
+	</ul>
+  </body>
+</html>
